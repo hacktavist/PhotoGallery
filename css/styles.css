@@ -1,0 +1,282 @@
+/************************************************************
+* Author: Nic Patterson
+* Description: Main css file for photo gallery site
+************************************************************/
+
+
+/************************************************************
+* Custom photo related css
+************************************************************/
+
+.gallery {
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 3px rgba(255, 255, 255, 0.7), 0 -2px 3px rgba(255, 255, 255, 0.9);
+    z-index: 0;
+}
+
+.image-preview img {
+    border-radius: 50%;
+    max-width: 75%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    -webkit-animation: rotatepics 10s 0s infinite ease-in-out;
+    -moz-animation: rotatepics 10s 0s infinite ease-in-out;
+    -o-animation: rotatepics 10s 0s infinite ease-in-out;
+    animation: rotatepics 10s 0s infinite ease-in-out;
+}
+
+
+/************************************************************
+* Main site css (header, content, etc)
+************************************************************/
+
+header {
+    background: #000;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #fff;
+    z-index: 100;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    height: 80px;
+    background: url(../img/logo.png) no-repeat center;
+    display: block;
+}
+
+nav {
+    float: right;
+    padding: 20px;
+}
+
+#menu-icon {
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    background: #000 url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+    background-color: #444;
+    border-radius: 4px 4px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: auto;
+}
+
+nav li {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+
+/************************************************************
+* Media Query
+************************************************************/
+
+@media only screen and (max-width: 640px) {
+    header {
+        position: absolute;
+    }
+    #menu-icon {
+        display: inline-block;
+    }
+    nav ul,
+    nav:active ul {
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #50525B;
+        border: 5px solid #445;
+        right: 20px;
+        top: 60px;
+        width: 50%;
+        border-radius: 4px 0 4px 4px;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+    }
+    nav:hover ul {
+        display: block;
+    }
+}
+
+.content {
+    padding-top: 150px;
+}
+
+
+/************************************************************
+* elastislide css overrides
+************************************************************/
+
+.elastislide-horizontal {
+    background-color: rgba(47, 47, 47, 0.9);
+}
+
+.elastislide-carousel ul li a {
+    padding: 2px;
+    width: 75%;
+}
+
+.elastislide-carousel ul li a img {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 2px #000;
+}
+
+.elastislide-wrapper nav span {
+    background-color: #666;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.elastislide-carousel ul li.current-img a img {
+    box-shadow: 0 0 3px 2px rgba(184, 243, 4, 1);
+}
+
+.elastislide-carousel ul li a img:hover {
+    -webkit-animation: flippics 2s 0s 1 ease-in-out;
+    -moz-animation: flippics 2s 0s 1 ease-in-out;
+    -o-animation: flippics 2s 0s 1 ease-in-out;
+    animation: flippics 2s 0s 1 ease-in-out;
+}
+
+
+/************************************************************
+* html junk
+************************************************************/
+
+a {
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #fff;
+}
+
+body {
+    background: #505257 url(../img/bg.jpg);
+    background-size: cover;
+}
+
+div {
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.15em;
+    margin: 20px auto;
+}
+
+p {
+    color: #fff;
+    padding-bottom: 50px;
+    padding-left: 40px;
+}
+
+ul,
+li {
+    color: #fff;
+    list-style-type: cjk-ideographic;
+}
+
+
+/************************************************************
+* Animations
+************************************************************/
+
+@-webkit-keyframes rotatepics {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@-moz-keyframes rotatepics {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@-o-keyframes rotatepics {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotatepics {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes flippics {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+@-moz-keyframes flippics {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+@-o-keyframes flippics {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+@-keyframes flippics {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}

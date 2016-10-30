@@ -1,0 +1,2 @@
+### The loading.gif is in there to keep elastislide happy, though I had to modify the elastislide css to look in img/ instead of images/   
+Probably could have done better but not enough time to look through all the elastislide.css to find what I wanted to steal from there
